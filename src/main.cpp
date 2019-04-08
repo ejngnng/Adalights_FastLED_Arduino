@@ -14,8 +14,4 @@ void setup(){
 
 void loop(){
   ada_loop();
-  adalights[0].r = 110;
-  adalights[0].g = 0;
-  adalights[0].b = 200;
-  FastLED.show();
 }

@@ -21,12 +21,12 @@ void led_strip_setup(){
 static void led_flashing_red_and_blue(){
     uint32_t now = millis();
     if(now - lastTime < flashing_interval){
-        for(uint8_t i=0; i<NUM_LEDS; i++){
+        for(uint16_t i=0; i<NUM_LEDS; i++){
             adalights[i] = CRGB::Red;
             FastLED.show();
         }
     }else if(now - lastTime >= flashing_interval && now - lastTime < 2*flashing_interval){
-        for(uint8_t i=0; i<NUM_LEDS; i++){
+        for(uint16_t i=0; i<NUM_LEDS; i++){
             adalights[i] = CRGB::Blue;
             FastLED.show();
         }
@@ -37,7 +37,7 @@ static void led_flashing_red_and_blue(){
 }
 
 static void led_strip_black(){
-    for(uint8_t i=0; i<NUM_LEDS; i++){
+    for(uint16_t i=0; i<NUM_LEDS; i++){
         adalights[i] = CRGB::Black;
         FastLED.show();
     }
