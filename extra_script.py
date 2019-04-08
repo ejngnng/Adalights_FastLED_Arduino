@@ -7,4 +7,4 @@ defines = {k: v for (k, v) in my_flags.get("CPPDEFINES")}
 buildtime = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
 
 #env.Replace(PROGNAME="firmware_%s" % buildtime)
-env.Replace(PROGNAME = "adalight_%s" % defines.get("VERSION"))
+env.Replace(PROGNAME = "Adalights_FastLED_Arduino_%s" % defines.get("VERSION"))
